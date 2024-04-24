@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Management\CategoryController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -13,10 +14,6 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -32,8 +29,8 @@ Route::get('management', function () {
     return view('management.index');
 });
 
+route::resource('management/category', App\Http\Controllers\Management\CategoryController::class);
+
 require __DIR__.'/auth.php';
 
 Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

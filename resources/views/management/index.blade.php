@@ -9,7 +9,7 @@
                         <div class="row justify-content-center">
                             <div class="col-md-4">
                                 <div class="list-group">
-                                    <a href="" class="list-group-item list-group-item-action">
+                                    <a href="/management/category" class="list-group-item list-group-item-action">
                                         <i class="fa-solid fa-bars"></i>
                                         Category
                                     </a>
