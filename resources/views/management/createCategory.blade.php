@@ -30,7 +30,17 @@
                                 <i class="fa-solid fa-bars"></i>
                                     Create Category
                                 <hr>
-                                <form action="" method="">
+                                @if($errors->any())
+                                    <div class="alert alert-danger">
+                                        <ul>
+                                            @foreach($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                @endif
+                                <form action="/management/category" method="post">
+                                    @csrf
                                     <div class="form-group">
                                         <label for="categoryName">Category Name</label>
                                         <input type="text" name="name" class="form-control" 
